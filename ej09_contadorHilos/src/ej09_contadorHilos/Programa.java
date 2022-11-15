@@ -7,7 +7,7 @@ public class Programa {
 		Incrementador h1 = new Incrementador(c);
 		Decrementador h2 = new Decrementador(c);
 		h1.start();
-		h2.start();;
+		h2.start();
 		h1.join();
 		h2.join();
 		System.out.println(c);

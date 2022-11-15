@@ -9,10 +9,12 @@ public class Contador {
 		this.numero = numero;
 	}
 	public void incrementar() {
-		numero++;
+		synchronized (this) {
+			numero++;			
+		}
 	}
-	public void decrementar() {
-		numero--;
+	public synchronized void decrementar() {
+			numero--;
 	}
 	@Override
 	public String toString() {
